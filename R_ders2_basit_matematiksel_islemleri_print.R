@@ -12,7 +12,7 @@
 ## Hasan yeni bir klasör açtır önce ardından eni bir script açtır o klasöre kadettir sonra başla 
 
 
-#Toplama
+#Toplamaa
 #Çıkarma
 #Bölme
 #Çarpma
