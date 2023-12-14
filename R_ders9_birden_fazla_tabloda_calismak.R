@@ -13,51 +13,50 @@ library(readxl)
 
 ## Data import
 
-kisi_bilgisi <- read_xlsx("ad_cinsiyet_okulnu.xlsx")
-  
-hobi_bilgisi <- read_xlsx("hobi_fobi_yemek.xlsx")
+kisisel_bilgiler <- read_xlsx("ad_cinsiyet_okulnu.xlsx")
+
+hobiler <- read_xlsx("hobi_fobi_yemek.xlsx")
 
 ## merge() 
+colnames(kisisel_bilgiler)
+colnames(hobiler)
 
-merged_table <- merge(kisi_bilgisi,hobi_bilgisi, by.x = "Ad-Soyad", by.y = "Ad-Soyad")
-
-
+merged_dosya <- merge(kisisel_bilgiler,hobiler, by.x = "Ad-Soyad", by.y = "Ad-Soyad")
 
      ################## cbind(), bind_rows(), rbind() #################
-
-
-## Farklı tablolardan veri almak 
 
 
 
 #cbind()
 
-birlestirme <- cbind(kisi_bilgisi$`Ad-Soyad`, hobi_bilgisi$Hobi)
+cbind_data1 <- cbind(kisisel_bilgiler$Cinsiyet, hobiler$Yemek)
+cbin_data2 <- cbind(kisisel_bilgiler[2], hobiler[3])
+cbin_data3 <- cbind(kisisel_bilgiler["Cinsiyet"], hobiler["Fobi"])
 
 #rbind()
 
-newdata <- rbind(row_2$Hobi,kisi_bilgisi$`Ad-Soyad`)
+
+rbind_data <- rbind(kisisel_bilgiler$`Okul Nu`, hobiler$Yemek)
 
 #bind_rows 
 
-uzun_data <- 
+library(dplyr)
 
-binded_rows <- bind_rows(kisi_bilgisi,aaaa)
-
-
+farklı_row <- bind_rows(kisisel_bilgiler, hobiler)
 
 
       #########  Yeni tabloyu export etmek  ############
 
-## csv 
+#write.csv()
 
-## txt
+write.csv(farklı_row, "farklı_row.csv")
 
-write.table(mtcars, file = "mtcars.txt", sep = "\t", row.names = FALSE)
+##write.table
+write.table(farklı_row, "farklı_row.txt", row.names = F, sep = ",")
 
-## excel
+## write_xlsx()
 
 library(writexl)
-write_xlsx()
 
+write_xlsx(farklı_row, "farklı_row.xlsx")
 

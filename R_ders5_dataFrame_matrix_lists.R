@@ -7,31 +7,44 @@
 
 
     ## Data Import
+library(readxl)
 
-cow <- read.csv("cow_all_genes.csv")
+dog <- read_xlsx("C:\\Users\\Hasan Can Demirci\\Desktop\\R_dersleri\\dog.xlsx")
+
+
 
     ## Check data class
+
+class(dog)
 
 
     ##Datayı diğer tiplere çevirme
 
     
-cow_list <- as.list(read.csv("cow_all_genes.csv"))
+dog_list <- as.list(dog)
 
-cow_matrix <- as.matrix(read.csv("cow_all_genes.csv"))
-
-cow_L <- as.list(cow)
+dog_matrix <- as.matrix(dog)
 
 
-    ## Kendimiz data oluşturup türler arası geçiş yapalım
+x <- 1:5 #numeric
 
-x <- 1:5
-y <- 10:14
+class(x)
 
-hasan <- data.frame(x=1:5, y=10:14)
+y <- c("Ertuğrul hocam", "Merhaba", "Ali", "mUSTAFA", "orhan") #string
+
+class(y)
+
+new_data <- data.frame(x ,y)
 
 
-hasan[2,2] <- "hasan"
+class(new_data) #data frame
 
-hasan_mat <- as.matrix(hasan)
-hasan_mat ## matrix tek tür veri tipi tutar 
+class(new_data$x)
+class(new_data$y)
+
+z <- 11:15
+
+new_data_matrix <- matrix(x,z)
+
+
+

@@ -10,45 +10,54 @@
 
 #Veri oluşturma
 
-x <- 1:10
-y <- 11:20
+x <- 1:5
+
+y <- 6:10
+
 
 #If
 
-if (11 %in% x) {
+if (1 %in% x && 3 %in%x) {
   
-  print("İçinde")
-} else if (11 > x) {
+  print("İlk if baglacımı kullandım")
   
-  print("içinde degil")
+} else if (3 %in% y) {
+  
+  print("Eleman Y nin içerisindedi")
+  
 } else {
   
-  print("birşey")
+  print("Eleman hiçbiryerde değildir")
 }
 
 #ifelse
 
 ##data import 
 
+library(readxl)
+
+data_1 <- read_xlsx("ad_cinsiyet_okulnu.xlsx")
+
+data_1$renkler <- ifelse(data_1$Cinsiyet == "E", "mavi", "pembe")
 
 #For
 
-dmrc <- c()
+merhaba <- c()
 
-for (i in x) {
+for (i in 1:10) {
   
-  dmrc <- c(dmrc,i+1)
-  
+  merhaba <- c(merhaba,i)
 }
+
 
 #While
 
-hcd <- c()  
+dmrc <- c()
 
-while (length(hcd) < 10) {
- 
-   hcd <- c(hcd, "Merhaba")
-   
+while (length(dmrc) <= 10) {
+  
+  dmrc <- c(dmrc, "Merhaba")
+  
 }
 
 

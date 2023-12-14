@@ -1,0 +1,11 @@
+"Ad-Soyad" "Cinsiyet" "Okul Nu" "Hobi" "Fobi" "Yemek"
+"Ali Demirci" "E" 1 NA NA NA
+"Yahya Balcı" "E" 2 NA NA NA
+"Ayşe Demirci" "K" 3 NA NA NA
+"Mustafa Korkmaz" "E" 4 NA NA NA
+"Merve Kalemci" "K" 5 NA NA NA
+"Ali Demirci" NA NA "Futbol" "fare" "pide"
+"Yahya Balcı" NA NA "Tamirat" "yılan" "köfte"
+"Ayşe Demirci" NA NA "Resim" "köpek" "pilav"
+"Mustafa Korkmaz" NA NA "Kodlama" "örümcek" "simit"
+"Merve Kalemci" NA NA "Yüzme" "yılan" "tost"
