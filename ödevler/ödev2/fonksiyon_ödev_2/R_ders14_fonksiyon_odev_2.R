@@ -9,3 +9,43 @@
 
 ## Basit Hesap Makinesi 
 
+
+
+hesap_makinesi <- function() {
+  
+  
+  x <- as.numeric(readline(prompt = "x sayınızı giriniz: "))
+
+  y <- as.numeric(readline(prompt = "y sayınızı giriniz: "))
+  
+  islem_tercihi <- readline(prompt = "Hangi işlemi yapmak istersiniz?")
+  
+  if (islem_tercihi == "toplama") {
+    
+    print(x+y)
+  } else if (islem_tercihi == "cıkarma") {
+    
+    print(x-y)
+  } else if (islem_tercihi == "carpma") {
+    
+    print(x*y)
+  } else if (islem_tercihi == "bolme") {
+    
+    print(x/y)
+  }else if (islem_tercihi == "üs alma") {
+    
+    print(x**y)
+  } else {
+    
+    print("Seçiminizi gerçkelşetiremiyoruz!")
+  }
+    
+  
+}
+
+
+hesap_makinesi()
+
+
+
+

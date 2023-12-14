@@ -11,11 +11,24 @@
 # Fonksiyon ile veri alma
 
 
-x <- as.integer(readline(prompt = "CEVABINIZ: "))
+
+x <- as.numeric(readline(prompt = "X için verinizi giriniz: "))
 
 
-a <- function() {
-  
-  print("KEMAL")
+# alınan verinin belirlenmesi
+
+y <- as.numeric(readline(prompt = "y için verinizi giriniz: "))
+
+class(y)
+
+## fonksiyon oluşturma temeli
+
+ilk_fonksiyon <- function() {
+  x <- as.numeric(readline(prompt = "X için verinizi giriniz: "))
+  y <- as.numeric(readline(prompt = "y için verinizi giriniz: "))
+  print("Sonucunuz: ", x+y)
 }
-a()
+
+ilk_fonksiyon()
+print()
+
