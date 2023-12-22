@@ -2,4 +2,4 @@
 
 Bu dersin eğitim videoları için : (https://www.youtube.com/@merhabayazilim)
 
-## Yakında Orta Seviye R eğitimimiz de gelecektir :)
+Yakında Orta Seviye R eğitimimiz de gelecektir :)
